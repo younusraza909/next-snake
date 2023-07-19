@@ -50,7 +50,7 @@ const GameBoard: FC<GameBoardProps> = ({}) => {
             }
         }
         setCooldown(true);
-        setTimeout(() => setCooldown(false), 200);
+        setTimeout(() => setCooldown(false), 100);
     };
 
     // Eat Food
