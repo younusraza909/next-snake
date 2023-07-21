@@ -78,6 +78,12 @@ const GameBoard: FC<GameBoardProps> = ({}) => {
             setGameOver(true);
         }
 
+        // Checking If snake bit itself
+        const isBit = snake.slice(1).some((ele:{x:number,y:number}) => ele.x === snake[0].x && ele.y === snake[0].y);
+        if (isBit) {
+            setGameOver(true);
+        }
+
         // Move snake
         let newSnake = [...snake];
         if (direction === 'UP') {
